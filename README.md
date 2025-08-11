@@ -1,10 +1,10 @@
 # ONE: Oracle Next Education
 
-## Secret Friend Challenge
+# Secret Friend Challenge
 
 Website that runs a Secret Friend game. Made with HTML, CSS and JavaScript for studies and portfolio purposes only. This assignment is part of the ONE: Oracle Next Education program.
 
-### Features
+## Features
 
 - Can add or remove as many names as you want;
 - Randomly picks a name to be your Secret Friend;
@@ -13,7 +13,7 @@ Website that runs a Secret Friend game. Made with HTML, CSS and JavaScript for s
 - Restart button (clears every entry and data to start a fresh game);
 - Fully responsive!
 
-### How does it work?
+## How does it work?
 
 1. Stores user inputs (secret friends' names) in an array, which is updated to a list and shown in screen as it grows or shrinks;
 2. When the `Draw a secret friend` button is pressed, an element from said array is picked randomly and is shown as your Secret Friend;
@@ -25,7 +25,7 @@ Website that runs a Secret Friend game. Made with HTML, CSS and JavaScript for s
 2. Create a folder and paste all the files in it;
 3. Run the code on a Live Server or in your preferred way to do so.
 
-### Usage
+## Usage
 
 1. Type the name of your friends and click `Add` or press <kbd>Enter</kbd>;
 2. Names will be displayed as buttons, click on a name to remove it from the list;
@@ -33,6 +33,6 @@ Website that runs a Secret Friend game. Made with HTML, CSS and JavaScript for s
 4. Click on `Hide secret name` to hide the result;
 5. Click on `Restart game` to clear everything and start a fresh game.
 
-### Screenshot
+## Screenshot
 
 ![alt text](assets/screenshot.png)
