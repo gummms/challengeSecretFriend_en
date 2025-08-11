@@ -11,6 +11,8 @@ Website that runs a Secret Friend game. Made with HTML, CSS and JavaScript for s
 - Buttons are disabled as long as they can't do their job;
 - Can hide the name of the last name drawn in order to not spoil the secret when playing with more than one person;
 - Restart button (clears every entry and data to start a fresh game);
+- Buttons with nice pressing animations;
+- An error message is prompted if the input is empty;
 - Fully responsive!
 
 ## How does it work?
