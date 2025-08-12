@@ -146,8 +146,10 @@ body {
 .result-text {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
-  height: 50%;
+  height: 100%;
+  max-width: 100%;
 }
 
 .result-buttons {
@@ -250,6 +252,16 @@ ul {
   color: var(--color-result);
   font-size: 4.5rem;
   font-weight: bold;
+}
+
+.result-list li {
+  max-width: 100%;
+}
+
+#secretFriend p {
+  max-width: 100%;
+  text-wrap: wrap;
+  overflow-wrap: break-word;
 }
 
 /* Hide name button */
@@ -423,8 +435,6 @@ ul {
   }
 
   .result-text {
-    width: 100%;
-    max-width: 100%;
     gap: 0.5rem;
   }
 

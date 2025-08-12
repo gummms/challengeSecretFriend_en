@@ -60,7 +60,7 @@ function eraseFriend(nameToRemove) {
 /* Picks a random name to be the Secret Friend */
 function drawFriend() {
   let sortedFriend = friendsArray[parseInt(Math.random() * friendsArray.length + 1) - 1];
-  resultMessage.innerHTML = `<h3>${sortedFriend}!</h3>`;
+  resultMessage.innerHTML = `<p>${sortedFriend}!</p>`;
   resultMessage.hidden = false;
   hideBtn.disabled = false;
   hiddenIcon.hidden = true;
