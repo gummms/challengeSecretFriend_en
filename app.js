@@ -3,11 +3,11 @@ let drawBtn = document.querySelector(".button-draw");
 let nameInput = document.querySelector(".input-name");
 let addBtn = document.querySelector(".button-add");
 let errorMessage = document.querySelector(".errorMessage");
-let friendsList = document.querySelector("#friendsList");
+let friendsList = document.querySelector(".friends-list");
 let nameBtn = document.querySelector(".button-name");
 let hideBtn = document.querySelector(".button-hide");
 let resetBtn = document.querySelector(".button-reset");
-let resultList = document.querySelector("#result");
+let resultList = document.querySelector(".result-List");
 let resultMessage = document.querySelector("#secretFriend");
 let hiddenIcon = document.querySelector("#hiddenIcon");
 
@@ -15,7 +15,7 @@ let hiddenIcon = document.querySelector("#hiddenIcon");
 function screenList() {
   friendsList.innerHTML = "";
   friendsArray.forEach(friend => {
-    friendsList.innerHTML += `<li><button active class="nameButton" onclick="eraseFriend('${friend}')">${friend}<i class="fa-solid fa-circle-xmark"></i></button></li>`;
+    friendsList.innerHTML += `<li><button active class="button-name" onclick="eraseFriend('${friend}')">${friend}<i class="fa-solid fa-circle-xmark"></i></button></li>`;
   });
   if (friendsArray == "") {
     resetBtn.disabled = true;
@@ -71,11 +71,11 @@ function hideName() {
   if (hiddenIcon.hidden == false && resultMessage.hidden == true) {
     hiddenIcon.hidden = true;
     resultMessage.hidden = false;
-    hideBtn.innerHTML = `<i class="fa-solid fa-eye-slash"></i>Hide secret name`;
+    hideBtn.innerHTML = `<i class="fa-solid fa-eye-slash"></i><span class="button-text">Hide secret name</span>`;
   } else {
     resultMessage.hidden = true;
     hiddenIcon.hidden = false;
-    hideBtn.innerHTML = `<i class="fa-solid fa-eye"></i>Show secret name`;
+    hideBtn.innerHTML = `<i class="fa-solid fa-eye"></i><span class="button-text">Show secret name</span>`;
   }
   hideBtn.active = true;
 }

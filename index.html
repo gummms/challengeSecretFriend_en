@@ -35,7 +35,7 @@
             <div class="button-container">
               <button active class="button-draw" onclick="drawFriend()" aria-label="Draw a secret friend" disabled>
                 <i class="fa-solid fa-circle-play"></i>
-                Draw a secret friend
+                <span class="button-text">Draw a secret friend</span>
               </button>
             </div>
           </div>
@@ -44,27 +44,30 @@
               <input type="text" id="friend" class="input-name" placeholder="Type a name..." />
               <button active class="button-add" onclick="addFriend()">
                 <i class="fa-solid fa-circle-plus"></i>
-                Add
+                <span class="button-text">Add</span>
               </button>
             </div>
             <p class="errorMessage" hidden>Please, type a name.</p>
           </div>
 
-          <ul id="friendsList" class="name-list" aria-labelledby="friendsList" role="list"></ul>
+          <ul id="friends" class="friends-list" aria-labelledby="friends-list" role="list"></ul>
         </div>
 
         <div class="result-section">
-          <h3 class="result-title">Your secret friend is...</h3>
-          <ul id="result" class="result-list" aria-live="polite">
-            <li hidden id="secretFriend"></li>
-            <li hidden id="hiddenIcon"><i class="fa-solid fa-eye-slash"></i></li>
-          </ul>
-          <div class="resultBtnContainer">
+          <div class="result-text">
+            <h3 class="result-title">Your secret friend is...</h3>
+            <ul id="result" class="result-list" aria-live="polite">
+              <li hidden id="secretFriend"></li>
+              <li hidden id="hiddenIcon"><i class="fa-solid fa-eye-slash"></i></li>
+            </ul>
+          </div>
+          <div class="result-buttons">
             <button disabled active class="button-hide" onclick="hideName()">
-              <i class="fa-solid fa-eye-slash"></i>Hide secret name
+              <i class="fa-solid fa-eye-slash"></i>
+              <span class="button-text">Hide secret name</span>
             </button>
             <button disabled active class="button-reset" onclick="newGame()">
-              <i class="fa-solid fa-rotate-right"></i>Restart game
+              <i class="fa-solid fa-rotate-right"></i><span class="button-text">Reset game</span>
             </button>
           </div>
         </div>
