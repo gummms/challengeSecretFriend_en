@@ -2,6 +2,8 @@
 
 # Secret Friend Challenge
 
+[<ins>Click here for live preview!</ins>](https://gummms.github.io/challengeSecretFriend_en/)
+
 Website that runs a Secret Friend game. Made with HTML, CSS and JavaScript for studies and portfolio purposes only. This assignment is part of the ONE: Oracle Next Education program.
 
 ## Features
