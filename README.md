@@ -34,7 +34,7 @@ Website that runs a Secret Friend game. Made with HTML, CSS and JavaScript for s
       - Said element is then removed from the Secret array.
 
    2. If Secret array is empty:
-      - Displays a "There are no more names to draw!" message and disabled the draw button.
+      - Displays a "There are no more names to draw!" message and disables the draw button.
 
 ## Installation
 
