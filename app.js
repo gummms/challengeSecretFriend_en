@@ -1,4 +1,5 @@
 let friendsArray = [];
+let shuffledArray = [];
 let drawBtn = document.querySelector(".button-draw");
 let nameInput = document.querySelector(".input-name");
 let addBtn = document.querySelector(".button-add");
@@ -41,6 +42,7 @@ function addFriend() {
   let secretName = nameInput.value.trim();
 
   if (secretName !== "") {
+    shuffledArray.push(secretName);
     friendsArray.push(secretName);
     errorMessage.hidden = true;
     nameInput.value = "";
@@ -59,11 +61,21 @@ function eraseFriend(nameToRemove) {
 
 /* Picks a random name to be the Secret Friend */
 function drawFriend() {
-  let sortedFriend = friendsArray[parseInt(Math.random() * friendsArray.length + 1) - 1];
-  resultMessage.innerHTML = `<p>${sortedFriend}!</p>`;
-  resultMessage.hidden = false;
-  hideBtn.disabled = false;
+  let sortedFriend = shuffledArray[parseInt(Math.random() * shuffledArray.length + 1) - 1];
+
+  if (shuffledArray.length == 0) {
+    resultMessage.innerHTML = `<p style="color: red; font-size: 2rem;">There are no more names to draw!</br></br>Add more names or reset the game.</p>`;
+    hideBtn.disabled = true;
+    drawBtn.disabled = true;
+  } else {
+    let pickName = sortedFriend;
+    resultMessage.innerHTML = `<p>${pickName}!</p>`;
+    shuffledArray = shuffledArray.filter(friend => friend !== sortedFriend);
+    hideBtn.disabled = false;
+  }
+
   hiddenIcon.hidden = true;
+  resultMessage.hidden = false;
 }
 
 /* Hides or shows sorted name */
