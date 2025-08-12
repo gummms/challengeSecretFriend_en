@@ -73,9 +73,9 @@ function drawFriend() {
     shuffledArray = shuffledArray.filter(friend => friend !== sortedFriend);
     hideBtn.disabled = false;
   }
-
-  hiddenIcon.hidden = true;
-  resultMessage.hidden = false;
+  hiddenIcon.hidden = false;
+  resultMessage.hidden = true;
+  hideName();
 }
 
 /* Hides or shows sorted name */
@@ -95,6 +95,7 @@ function hideName() {
 /* Wipes everything and start a fresh new game */
 function newGame() {
   friendsArray = [];
+  shuffledArray = [];
   drawBtn.disabled = true;
   hideBtn.disabled = true;
   resetBtn.disabled = true;
